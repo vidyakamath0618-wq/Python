@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+    scanf("%c", &ch);
+
+    if (isalpha((unsigned char)ch))
+        printf("%c is an alphabet\n", ch);
+    else
+        printf("%c is not an alphabet\n", ch);
+
+    return 0;
+}
