@@ -1,0 +1,7 @@
+# Program to count how many digits are in a number
+num = input("Enter a number: ")
+# Remove any minus sign so it doesn't count as a digit
+num = num.lstrip("-")
+# Count digits
+digit_count = len(num)
+print("Total digits:", digit_count)
