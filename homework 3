@@ -1,0 +1,5 @@
+# Program to calculate the n-th power of a given number
+base = float(input("Enter the base number: "))
+power = int(input("Enter the power (n): "))
+result = base ** power
+print("Result:", result)
