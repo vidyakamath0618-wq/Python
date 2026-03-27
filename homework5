@@ -1,0 +1,12 @@
+# Program to check if the entered age is valid and calculate age
+try:
+    age = int(input("Enter your age: "))
+    # Check if age is within a realistic range
+    if age < 0:
+        print("Error: Age cannot be negative.")
+    elif age > 120:
+        print("Error: Age entered is too high to be realistic.")
+    else:
+        print("The age you entered is correct:", age)
+except ValueError:
+    print("Error: Please enter numbers only for age.")
