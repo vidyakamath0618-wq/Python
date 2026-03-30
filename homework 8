@@ -1,0 +1,4 @@
+def shutdown():
+    print("System is shutting down...")
+# calling the function
+shutdown()
