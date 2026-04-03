@@ -1,0 +1,17 @@
+start = int(input("Enter the start of the range: "))
+end = int(input("Enter the end of the range: "))
+squares = []
+odd_squares = []
+even_squares = []
+# create list of squares
+for num in range(start, end + 1):
+    sq = num * num
+    squares.append(sq)
+    # separate odd and even squares
+    if sq % 2 == 0:
+        even_squares.append(sq)
+    else:
+        odd_squares.append(sq)
+print("All square values:", squares)
+print("Even square values:", even_squares)
+print("Odd square values:", odd_squares)
