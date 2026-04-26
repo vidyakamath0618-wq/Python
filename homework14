@@ -1,0 +1,26 @@
+#ASCII value checker - complete program
+print("ASCII value checker")
+print("=" * 40)
+#get input
+char = input("enter a single character:")
+#validate input
+if type(char) is str and len(char)==1:
+    #get ASCII value checker
+    ascii_val = ord(char)
+    #display result
+    print(f"\nCharacter:'(char)")
+    print(f"ASCII value:{ascii_val}")
+    #identify type
+    print("\nCharacter type:", end="")
+    if ascii_val>=65 and ascii_val<=90:
+        print("upper case letter")
+    elif ascii_val>=97 and ascii_val<=122:
+        print("lowercase letter")
+    elif ascii_val>=48 and ascii_val<=57:
+        print("digit")
+    elif ascii_val == 32:
+        print("Space")
+    else:
+        print("special character")
+else:
+    print("\nError:please enter exactly ONE character!")
