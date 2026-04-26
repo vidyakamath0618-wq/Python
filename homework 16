@@ -1,0 +1,12 @@
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return 3.14159 * self.radius * self.radius
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+# Example usage:
+r = float(input("Enter radius of the circle: "))
+c = Circle(r)
+print("Area of circle:", c.area())
+print("Perimeter of circle:", c.perimeter())
