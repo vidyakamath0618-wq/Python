@@ -1,0 +1,19 @@
+class Dog:
+    # Class variable (shared by all dogs)
+    species = "Canis Familiaris"
+    # Constructor with two instance variables
+    def __init__(self, name, breed):
+        self.name = name        # instance variable 1
+        self.breed = breed      # instance variable 2
+    # Method to display dog details
+    def display_details(self):
+        print("Dog Name:", self.name)
+        print("Breed:", self.breed)
+        print("Species:", Dog.species)
+        print("------------------------")
+# Creating two dog objects of different breeds
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Max", "German Shepherd")
+# Displaying details
+dog1.display_details()
+dog2.display_details()
