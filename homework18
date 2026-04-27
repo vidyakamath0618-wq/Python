@@ -1,0 +1,15 @@
+# Given test dictionary
+test_dict = {
+    "a": 3,
+    "b": 5,
+    "c": 3,
+    "d": 2,
+    "e": 3
+}
+# Value to check frequency
+value = 3
+# Count frequency
+frequency = list(test_dict.values()).count(value)
+print("Dictionary:", test_dict)
+print("Value to check:", value)
+print("Frequency:", frequency)
