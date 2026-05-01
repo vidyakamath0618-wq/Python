@@ -1,0 +1,17 @@
+# 1. Create a list of squares from 1 to 10
+squares = [x*x for x in range(1, 10+1)]
+print("Squares:", squares)
+# 2. Get even numbers from a list
+numbers = [12, 3, 5, 8, 10, 15, 20]
+even_numbers = [n for n in numbers if n % 2 == 0]
+print("Even Numbers:", even_numbers)
+# 3. Convert all words to uppercase
+words = ["codingal", "makes", "learning", "fun"]
+upper_words = [w.upper() for w in words]
+print("Uppercase Words:", upper_words)
+# 4. Extract first letters of each word
+first_letters = [w[0] for w in words]
+print("First Letters:", first_letters)
+# 5. Create a list of tuples (number, square)
+num_square_pairs = [(n, n*n) for n in range(1, 6)]
+print("Number–Square Pairs:", num_square_pairs)
