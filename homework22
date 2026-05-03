@@ -1,0 +1,12 @@
+class ReverseString:
+    def __init__(self, text):
+        self.text = text
+    def reverse_words(self):
+        words = self.text.split()          # split into words
+        reversed_words = words[::-1]       # reverse the list of words
+        return " ".join(reversed_words)    # join back into a string
+# Main program
+sentence = input("Enter a sentence: ")
+obj = ReverseString(sentence)
+print("Original sentence:", sentence)
+print("Reversed sentence:", obj.reverse_words())
