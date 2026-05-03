@@ -1,0 +1,19 @@
+import random
+import string
+def generate_password(length):
+    # characters to use
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    digits = string.digits
+    # combine all characters
+    all_chars = lower + upper + digits
+    # randomly choose characters
+    password_list = random.sample(all_chars, length)
+    # shuffle the characters
+    random.shuffle(password_list)
+    # convert list to string
+    password = "".join(password_list)
+    return password
+# Main program
+length = int(input("Enter password length: "))
+print("Generated Password:", generate_password(length))
