@@ -1,0 +1,30 @@
+import pygame
+# -----------------------------
+# 1. BASIC VARIABLES
+# -----------------------------
+screen_width = 800
+screen_height = 600
+screen_title = "My First Game Screen"
+background_color = (0, 150, 255)   # light blue (R, G, B)
+# -----------------------------
+# 2. INITIALIZE PYGAME
+# -----------------------------
+pygame.init()
+# Create the game window
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption(screen_title)
+# -----------------------------
+# 3. GAME LOOP
+# -----------------------------
+running = True
+while running:
+    # Check for events (like closing the window)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    # Fill the screen with the background color
+    screen.fill(background_color)
+    # Update the display
+    pygame.display.update()
+# Quit pygame
+pygame.quit()
