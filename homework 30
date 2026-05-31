@@ -1,0 +1,29 @@
+import pygame
+import random
+pygame.init()
+# Screen
+screen = pygame.display.set_mode((600, 400))
+pygame.display.set_caption("Custom Event Example")
+# Two sprites (rectangles)
+sprite1 = pygame.Rect(100, 150, 60, 60)
+sprite2 = pygame.Rect(300, 150, 60, 60)
+# Starting colours
+color1 = (255, 0, 0)
+color2 = (0, 0, 255)
+# Create a custom event that triggers every 1000 ms (1 second)
+CHANGE_COLOR = pygame.USEREVENT + 1
+pygame.time.set_timer(CHANGE_COLOR, 1000)
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        # Custom event: change colours
+        if event.type == CHANGE_COLOR:
+            color1 = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+            color2 = (random.randint(0,255), random.randint(0,255), random.randint(0,255))
+    screen.fill((255, 255, 255))
+    pygame.draw.rect(screen, color1, sprite1)
+    pygame.draw.rect(screen, color2, sprite2)
+    pygame.display.update()
+pygame.quit()
